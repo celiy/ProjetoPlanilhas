@@ -1,38 +1,41 @@
-from tkinter import *
 import xlsxwriter
 from openpyxl import load_workbook
-import openpyxl
 import pandas as pd
 import os
 
-class InfoPlanilha:
+colunas = []
+def armazenar_colunas(worksheet):
+    for cell in worksheet[1]:
+        colunas.append(cell.value)
 
-def arquivo(nome,oqfeito,data):
+def arquivo(info_colunas, dadosp):
 
     file_path = 'planilha.xlsx'
 
     if os.path.exists(file_path):
         workbook = load_workbook(file_path)
         worksheet = workbook.active
+        armazenar_colunas(worksheet)
     else:
         workbook = xlsxwriter.Workbook(file_path)
         worksheet = workbook.add_worksheet()
-        worksheet.write('A1', 'Nome')
-        worksheet.write('B1', 'Serviço Prestado')
-        worksheet.write('C1', 'Data')
+
+        rowschars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        for c, p in enumerate(info_colunas):
+            rowc = rowschars[c]+"1"
+            worksheet.write(rowc, p)
+
         workbook.close()
         workbook = load_workbook(file_path)
         worksheet = workbook.active
+        armazenar_colunas(worksheet)
 
-    existing_file = 'planilha.xlsx'
-
-    #Adicionar as informações na planilha
-    new_data = [[nome, oqfeito, data]]
-    wb = load_workbook(existing_file)
-    ws = wb.active
-    for row in new_data:
-        ws.append(row)
-    wb.save(existing_file)
+    if dadosp is not None:
+        #Adicionar as informações na planilha
+        wb = load_workbook(file_path)
+        ws = wb.active
+        ws.append(dadosp)
+        wb.save(file_path)
 
     workbook.close()
 
@@ -42,26 +45,55 @@ def mostrarplanilha():
 
     print(df)
 
+def carregarplanilha():
+    fpath = 'planilha.xlsx'
+    if os.path.exists(fpath):
+        book = load_workbook(fpath)
+        sheet = book.active
+        armazenar_colunas(sheet)
+
+carregarplanilha()
+
 print("O que deseja fazer?")
 print("1 - Ler planilha \n2 - Inserir dados \n3 - Modificar dados "
-      "\n 4 - Criar planilha")
+      "\n4 - Criar planilha")
+
 opcao = int(input())
 if opcao == 1:
     mostrarplanilha()
+
 elif opcao == 2:
-    print("Insira o nome: ")
-    nome = str(input())
-    print("Insira o serviço prestado: ")
-    oqfeito = str(input())
-    print("Insira a data que foi feito: ")
-    data = str(input())
-    arquivo(nome, oqfeito, data)
+    print("Deseja inserir novas colunas/linhas (1) ou dados a elas (2)? ")
+    opcao = int(input())
+    if opcao == 1:
+        print()
+    if opcao == 2:
+        dados = []
+        for titulo in colunas:
+            print(f"Digite o dado para a coluna '{titulo}': ")
+            dado = str(input())
+            dados.append(dado)
+        arquivo(None, dados)
+
 elif opcao == 3:
     print("Deseja modiciar uma linha (1) ou coluna (2)?")
     opcao = int(input())
     if opcao == 1:
         print("TTT")
-    elif opcao == 1:
+    elif opcao == 2:
         print("TTT")
+
 elif opcao == 4:
-    print("Quantas colunas deseja criar? ")
+    path = 'planilha.xlsx'
+    if os.path.exists(path):
+        print("Erro: A planilha já existe.")
+    else:
+        print("Quantas colunas deseja criar? (max: 25)")
+        cols = int(input())
+        print("Quais devem ser o titulo de cada coluna? ")
+        titulo_colunas = []
+        for n in range(cols):
+            print(f"Titulo da coluna {n+1}: ")
+            titulo_colunas.append(str(input()))
+        print(f"Dados inseridos: {titulo_colunas}")
+        arquivo(titulo_colunas,None)
