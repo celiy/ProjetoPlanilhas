@@ -25,7 +25,7 @@ Escaneia os dados e informa o tipo de escaneamento que o usuário preferir. <br>
 <b>4.1.1:</b> Somar os valores de uma coluna/linha <br>
 <b>4.1.2:</b> Multiplicar os valores de uma coluna/linha <br>
 <b>4.1.3:</b> Saber a média dos valores de uma coluna/linha <br>
-<b>4.2:</b> Mostra o valor que se mais se repete em uma linha/coluna <br>
+<b>4.2:</b> Mostra o valor que mais se repete em uma linha/coluna <br>
 <b>4.3:</b> Mostra o maior valor de uma linha/coluna <br>
 <h4>5. Criar planilha</h4>
 Cria uma planilha em formato xlsx com um número especificado de colunas e nomes para cada uma delas informado pelo usuário.
