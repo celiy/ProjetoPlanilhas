@@ -6,12 +6,12 @@ Este é um pequeno projeto feito em Python que foi feito com o intuito de automa
 <li> 2. Inserir dados
 <li> 3. Modificar dados
 <li> 4. Escanear dados
-    <li>1. Expressão matemática
-        <li>1. Soma
-        <li>2. Multiplicação
-        <li>3. Média
-    <li>2. Valores repetidos
-    <li>3. Maior/Menor valor
+    <li></li><li>1. Expressão matemática
+        <li></li><li></li><li>1. Soma
+        <li></li><li></li><li>2. Multiplicação
+        <li></li><li></li><li>3. Média
+    <li></li><li>2. Valores repetidos
+    <li></li><li>3. Maior/Menor valor
 <li> 5. Criar planilha
 
 <h3>1. Ler planilha</h3>
