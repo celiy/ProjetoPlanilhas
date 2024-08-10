@@ -31,6 +31,6 @@ Escaneia os dados e informa o tipo de escaneamento que o usuário preferir. <br>
 Cria uma planilha em formato xlsx com um número especificado de colunas e nomes para cada uma delas informado pelo usuário.
 
 <h1>Como usar</h1>
-Para executar o arquivo basta ter instalado no seu computador o Python.<br>
-<li>Link para download: https://www.python.org/downloads/
+Para executar o arquivo basta ter Python instalado no seu computador.<br>
+<li>Link para download: https://www.python.org/downloads/ <br>
 Após baixar e instalar, apenas baixe o código e execute o <b>main.py</b> dando duplo click no arquivo ou abrindo um CMD/PowerShell no local do arquivo e executando o comando <b>python main.py</b>
