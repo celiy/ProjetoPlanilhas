@@ -14,20 +14,20 @@ Este é um pequeno projeto feito em Python que foi feito com o intuito de automa
     <li>4.3. Maior/Menor valor
 <li> <b>5.</b> Criar planilha
 
-<h3>1. Ler planilha</h3>
+<h4>1. Ler planilha</h4>
 Imprime a planilha no console.
-<h3>2. Inserir dados</h3>
+<h4>2. Inserir dados</h4>
 Insere dados que o usuário informa, organizando automaticamente conforme o numero de colunas.
-<h3>3. Modificar dados</h3>
-Permite que o usuário modifique um valor da planilha.
-<h3>4. Escanear dados</h3>
+<h4>3. Modificar dados</h4>
+Permite que o usuário modifique um valor da planilha especificando sua linha e coluna.
+<h4>4. Escanear dados</h4>
 Escaneia os dados e informa o tipo de escaneamento que o usuário preferir. <br>
 <b>4.1.1:</b> Somar os valores de uma coluna/linha <br>
 <b>4.1.2:</b> Multiplicar os valores de uma coluna/linha <br>
 <b>4.1.3:</b> Saber a média dos valores de uma coluna/linha <br>
 <b>4.2:</b> Mostra o valor que se mais se repete em uma linha/coluna <br>
 <b>4.3:</b> Mostra o maior valor de uma linha/coluna <br>
-<h3>5. Criar planilha</h3>
+<h4>5. Criar planilha</h4>
 Cria uma planilha em formato xlsx com um número especificado de colunas e nomes para cada uma delas informado pelo usuário.
 
 <h1>Como usar</h1>
