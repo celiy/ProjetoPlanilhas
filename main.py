@@ -40,13 +40,14 @@ def editarelemento():
     coluna = coluna.upper()
     print("Insira a linha: ")
     linha = int(input())
+    linha = linha+2
     print("Insira o valor novo: ")
     valor = str(input())
     celula = sheet[coluna + str(linha)]
     if celula.value is None:
         print("Linha e coluna fora dos valores existentes")
     else:
-        sheet[f'{coluna}{linha+2}'] = valor
+        sheet[f'{coluna}{linha}'] = valor
         workbook.save(filepath)
 
     print("Dados atualizados: ")
