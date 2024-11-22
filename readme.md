@@ -36,21 +36,21 @@ XlsxWriter 3.2.0 <br>
 Para instalar as depedências é necessário que você tenha Python instalado no seu computador pois ele é o motor principal para o projeto e também por que pip vem junto com sua instalação.
 
 
-##### 1. Baixe o projeto e o extraia onde quiser.
+#### 1. Baixe o projeto e o extraia onde quiser.
 
-##### 2. Baixe e instale Python:
+#### 2. Baixe e instale Python:
  https://www.python.org/downloads/
  
-##### 3. Instale as dependências com pip:
+#### 3. Instale as dependências com pip:
 Abra uma janela de terminal e mude o diretório atual para onde está o projeto extraído:
 
-##### Exemplo no Windows e Linux:
+#### Exemplo no Windows e Linux:
 ```cd C:\Users\NOME_USUARIO\Documents\ProjetoPlanilhas ```<br>
 
-##### Instale as dependências:
+#### Instale as dependências:
 ```pip install -r requirements.txt ```
 
-##### 4. Execute o script:
+#### 4. Execute o script:
 ```pyhton main.py``` <br>
 
 ###### Caso isso não funcione, apenas dê duplo click no main.py
@@ -58,11 +58,11 @@ Abra uma janela de terminal e mude o diretório atual para onde está o projeto 
 # Como usar com GPT
 
 ### Pegue sua API Key do Groq:
-##### 1. Acesse o site: https://console.groq.com/playground <br>
+#### 1. Acesse o site: https://console.groq.com/playground <br>
 O site irá pedir seu login, então entre na sua conta ou crie caso não tenha uma.
 
-##### 2. Na aba da esquerda, clique em API Keys
+#### 2. Na aba da esquerda, clique em API Keys
 Clique no botão "Create API Key", então escolha um nome. Quando criado, copie sua chave e coloque um lugar para fácil acesso.
 
-##### 3. Na execução do programa:
+#### 3. Na execução do programa:
 Após selecionar o uso de controlar as planilhas por GPT, cole e envie a sua API Key no console quando requisitado.
