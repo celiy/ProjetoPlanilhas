@@ -223,11 +223,13 @@ else:
                 opcao = int(input())
                 if opcao == 1:
                     criararquivo()
+                    exit = False
                     break
                 else:
-                    pass
+                    exit = True
+                    break
     
-        while True:
+        while not exit:
             print("O que deseja fazer?")
             print("1 - Ler planilha \n"
                 "2 - Inserir dados \n"

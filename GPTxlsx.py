@@ -7,10 +7,9 @@ try:
     from tkinter import filedialog
     from groq import Groq
 except Exception as error:
-    print(error)
-    print("Houve um erro na hora de importar a dependências. Por favor, os instale com o comando a seguir no seu CMD/Terminal: "
-    "\n pip install -r requirements.txt \n\nCaso as depêndencias já estejam instaladas, tente executar o arquivo normalmente com duplo click invés do terminal.")
-    input()
+    print('\n'+str(error))
+    input("\nHouve um erro na hora de importar a dependências. Por favor, os instale com o comando a seguir no seu CMD/Terminal: "
+    "\n\n pip install -r requirements.txt \n\nCaso as depêndencias já estejam instaladas, tente executar o arquivo normalmente com duplo click invés do terminal.")
 else:
     def set_api_key():
         global apikey
@@ -100,7 +99,7 @@ else:
         
         chat_with_gpt(f"De maneira simples e objetiva, dado a seguinte planilha:\n \n{arquivo} \n \nFaça: {tipo_res}")
 
-        input()
+        input("Pressione qualquer tecla para continuar.")
 
     #======================#
     #[ Começo do programa ]#
@@ -134,16 +133,13 @@ else:
             else:
                 break
 
-    def GPTxlsx_main():
+    def GPTmain():
         set_api_key()
 
-        def selecionar_arquivo():
-            root = tk.Tk()
-            root.withdraw()
+        root = tk.Tk()
+        root.withdraw()
 
-            return filedialog.askopenfilename(title="Selecione a planilha")
-
-        filepath = selecionar_arquivo()
+        filepath = filedialog.askopenfilename(title="Selecione a planilha")
 
         if filepath:
             print(f"Arquivo selecionado: {filepath}")
