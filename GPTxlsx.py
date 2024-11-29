@@ -154,4 +154,5 @@ else:
                     passo_escolher(filepath)
                 else:
                     print("Planilha inexistente.")
+                    break
                     input()
