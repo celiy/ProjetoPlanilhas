@@ -139,7 +139,7 @@ else:
         root = tk.Tk()
         root.withdraw()
 
-        filepath = filedialog.askopenfilename(title="Selecione a planilha")
+        filepath = filedialog.askopenfilename(filetypes=[("Planilhas Excel", "*.xlsx")], title="Selecione a planilha")
 
         if filepath:
             print(f"Arquivo selecionado: {filepath}")
@@ -152,6 +152,7 @@ else:
             else:
                 if carregarplanilha(filepath):
                     passo_escolher(filepath)
+                    break
                 else:
                     print("Planilha inexistente.")
                     break
